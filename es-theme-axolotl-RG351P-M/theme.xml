@@ -1,0 +1,267 @@
+<!--
+Theme name:  Axolotl
+Artwork by:  Wolod
+Coding by:   Wolod
+Fonts used:  fonts/Acre Medium & fonts/Bebas Neue Bold
+
+# Thanks and Credits
+First of all I want to thank Nico La Rosa (Chicuelo), Nick L (c64-dev) and Travis Wilson - their themes were my source of inspiration. And of course thanks to all amazing artists who create awesome fan art and share it online.
+
+# License
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+-->
+
+<theme>
+<formatVersion>7</formatVersion>
+
+<variables>
+	<fullscreenfixSubsetname>Choose Emulationstation That's In Use</fullscreenfixSubsetname>
+	<showratingSubsetname>Show Game's Rating</showratingSubsetname>
+</variables>
+	
+<subset name="fullscreenfix" displayName="${fullscreenfixSubsetname}">
+	<include name="ES Header" displayName="${ES Header}">./_inc/settings/header.xml</include>
+	<include name="ES Fullscreen" displayName="${ES Fullscreen}">./_inc/settings/fullscreen.xml</include>
+</subset>
+
+<subset name="showrating" displayName="${showratingSubsetname}">
+	<include name="on" displayName="${on}">./_inc/settings/rating.xml</include>
+	<include name="off" displayName="${off}" />
+</subset>
+	
+<view name="menu">
+	<menuBackground name="menubg">
+		<color>101010</color>
+	</menuBackground>
+
+	<menuText name="menutext, menutitle">
+		<fontPath>./_inc/fonts/Acre.otf</fontPath>
+		<fontSize>.038</fontSize>
+	</menuText>
+
+	<menuText name="menutext">
+		<color>ffffff</color>
+		<selectedColor>56FF56</selectedColor>
+		<selectorColor>1c1c1c</selectorColor>
+		<separatorColor>393939</separatorColor>
+	</menuText>
+
+	<menuText name="menutitle">
+		<color>A0A0A0</color>
+	</menuText>
+
+	<menuText name="menufooter, menutextsmall">
+		<fontPath>./_inc/fonts/Acre.otf</fontPath>
+		<fontSize>.029</fontSize>		 
+		<color>A0A0A0</color>
+	</menuText>
+
+	<menuTextEdit name="menutextedit">
+		<inactive>./_inc/buttons/textinput_inactive.png</inactive>
+		<active>./_inc/buttons/textinput_active.png</active>
+	</menuTextEdit>
+
+	<menuButton name="menubutton">
+		<path>./_inc/buttons/button_inactive.png</path>
+		<filledPath>./_inc/buttons/button_active.png</filledPath>
+	</menuButton>
+
+	<menuSwitch name="menuswitch">
+		<pathOff>./_inc/buttons/switch_inactive.png</pathOff>
+		<pathOn>./_inc/buttons/switch_active.png</pathOn>
+	</menuSwitch>
+</view>
+
+<view name="system">
+	<image name="logo">
+		<path>./_inc/logos/${system.theme}.png</path>
+		<path>./_inc/logos/${system.theme}.jpg</path>
+	</image>
+	  
+	<image name="poster" extra="true">
+		<path>./_inc/posters/${system.theme}.jpg</path>
+		<path>./_inc/posters/${system.theme}.png</path>
+		<tile>false</tile>
+		<origin>0.5 0</origin>
+		<pos>0.5 0</pos>
+		<size>0 1</size>
+	</image>
+	
+	<image name="shadow" extra="true">
+		<path>./_inc/overlay/shadowforeground.png</path>
+		<tile>false</tile>
+		<origin>0.5 0</origin>
+		<pos>0.5 0</pos>
+		<size>0 1</size>
+	</image>
+
+	<carousel name="systemcarousel">
+		<type>horizontal</type>
+		<pos>0 0</pos>
+		<size>1 0.18</size>
+		<origin>0 0</origin>
+		<color>00000080</color>
+		<logoScale>1.9</logoScale>
+		<logoSize>0.15 0.08</logoSize>
+		<logoAlignment>center</logoAlignment>
+		<maxLogoCount>3</maxLogoCount>
+		<systemInfoDelay>0.5</systemInfoDelay>
+    </carousel>
+	
+	<text name="systemInfo">
+		<fontPath>./_inc/fonts/BebasNeue.otf</fontPath>
+		<alignment>center</alignment>
+		<backgroundColor>00000080</backgroundColor>
+		<forceUppercase>1</forceUppercase>
+		<color>56FF56</color>
+		<origin>0 0</origin>
+		<pos>0 0.82</pos>
+		<size>1 0.18</size>
+		<fontSize>0.050</fontSize>
+	</text>
+	
+	<helpsystem name="help">
+		<pos>1 1</pos>
+		<origin>1 0</origin>
+		<textColor>FFFFFF</textColor>
+		<iconColor>56FF56</iconColor>
+	</helpsystem>
+</view>
+
+<view name="basic, detailed, video">
+	<helpsystem name="help">
+		<pos>1 1</pos>
+		<origin>1 1</origin>
+		<textColor>FFFFFF</textColor>
+		<iconColor>56FF56</iconColor>
+	</helpsystem>
+	
+	<textlist name="gamelist">
+		<selectorColor>1c1c1c</selectorColor>
+		<selectedColor>56FF56</selectedColor>
+		<primaryColor>A0A0A0</primaryColor>
+		<secondaryColor>C0C0C0</secondaryColor>
+		<fontPath>./_inc/fonts/Acre.otf</fontPath>
+		<alignment>left</alignment>
+		<fontSize>0.035</fontSize>
+		<horizontalMargin>0.01</horizontalMargin>
+	</textlist>
+</view>
+
+<view name="basic">
+	<image name="background" extra="true">
+		<tile>false</tile>
+		<path>./_inc/backgrounds/ingame-basic-bg.png</path>
+		<size>1 1</size>
+		<pos>0 0</pos>
+	</image>
+
+	<textlist name="gamelist">
+		<pos>0.25 0</pos>
+		<size>0.5 0.95</size>
+	</textlist>
+</view>
+
+<view name="detailed, video">
+	<image name="background" extra="true">
+		<tile>false</tile>
+		<path>./_inc/backgrounds/ingame-detailed-bg.png</path>
+		<size>1 1</size>
+		<pos>0 0</pos>
+	</image>
+	
+	<image name="background_video" extra="true">
+		<tile>false</tile>
+		<path>./_inc/backgrounds/ingame-video-bg.png</path>
+		<size>1 1</size>
+		<pos>0 0</pos>
+		<zIndex>1</zIndex>
+	</image>
+	
+	<textlist name="gamelist">
+		<pos>0 0</pos>
+		<size>0.4 0.95</size>
+	</textlist>
+	
+	<text name="md_lbl_developer" extra="true">
+		<text>Developer</text>
+		<fontPath>./_inc/fonts/Acre.otf</fontPath>
+		<alignment>left</alignment>
+		<fontSize>0.028</fontSize>
+		<color>A0A0A0</color>
+		<origin>0 0</origin>
+		<pos>0.42 0.647</pos>
+		<size>0.5 0.03</size>
+	</text>
+
+	<text name="md_developer">
+		<fontPath>./_inc/fonts/Acre.otf</fontPath>
+		<color>FFFFFF</color>
+		<fontSize>0.035</fontSize>
+		<alignment>left</alignment>
+		<forceUppercase>0</forceUppercase>
+		<lineSpacing>1</lineSpacing>
+		<pos>0.42 0.697</pos>
+		<size>0.5 0.06</size>
+	</text>
+
+	<text name="md_lbl_releasedate" extra="true">
+		<text>Release Date</text>
+		<fontPath>./_inc/fonts/Acre.otf</fontPath>
+		<alignment>left</alignment>
+		<fontSize>0.028</fontSize>
+		<color>A0A0A0</color>
+		<origin>0 0</origin>
+		<pos>0.42 0.817</pos>
+		<size>0.5 0.03</size>
+	</text>
+
+	<datetime name="md_releasedate">
+		<fontPath>./_inc/fonts/Acre.otf</fontPath>
+		<color>FFFFFF</color>
+		<fontSize>0.035</fontSize>
+		<alignment>left</alignment>
+		<forceUppercase>0</forceUppercase>
+		<lineSpacing>1</lineSpacing>
+		<pos>0.42 0.867</pos>
+		<size>0.5 0.06</size>
+	</datetime>
+</view>
+
+<view name="detailed">
+	<image name="md_image">
+		<tile>false</tile>
+		<origin>0.5 0.5</origin>
+		<pos>0.7 0.3</pos>
+		<maxSize>0.6 0.6</maxSize>
+		<zIndex>2</zIndex>
+	</image>
+</view>
+
+<feature supported="video">
+	<view name="video">
+		<video name="md_video">
+			<origin>0.5 0.5</origin>
+			<pos>0.7 0.315</pos>
+			<maxSize>0.63 0.63</maxSize>
+			<delay>0.7</delay>
+			<showSnapshotNoVideo>true</showSnapshotNoVideo>
+			<showSnapshotDelay>true</showSnapshotDelay>
+			<zIndex>3</zIndex>
+		</video>
+	</view>
+</feature>
+
+<view name="screen">
+	<text name="clock">
+	  <color>FFFFFF</color>
+	  <fontPath>./_inc/fonts/Acre.otf</fontPath>
+	  <fontSize>0.035</fontSize>
+	  <pos>0.910 0.867</pos>
+	  <size>0.09 0.06</size>
+	  <alignment>left</alignment>
+	  <verticalAlignment>center</verticalAlignment>
+	</text>
+</view>
+
+</theme>

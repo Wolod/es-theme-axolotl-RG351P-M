@@ -1,0 +1,25 @@
+<theme>
+<formatVersion>7</formatVersion>
+
+<view name="detailed, video">
+	<text name="md_lbl_rating" extra="true">
+		<text>Rating</text>
+		<fontPath>./_inc/fonts/Acre.otf</fontPath>
+		<alignment>left</alignment>
+		<fontSize>0.028</fontSize>
+		<color>A0A0A0</color>
+		<origin>0 0</origin>
+		<pos>0.65 0.817</pos>
+		<size>0.5 0.03</size>
+	</text>
+
+	<rating name="md_rating">
+		<origin>0 0</origin>
+		<pos>0.65 0.867</pos>
+		<size>0.5 0.06</size>
+		<filledPath>./_inc/buttons/star_full.png</filledPath>
+		<unfilledPath>./_inc/buttons/star_hollow.png</unfilledPath>
+	</rating>
+</view>
+
+</theme>

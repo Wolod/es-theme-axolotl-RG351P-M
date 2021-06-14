@@ -1,0 +1,10 @@
+<theme>
+<formatVersion>7</formatVersion>
+
+<view name="basic, detailed, video">
+	<textlist name="gamelist">
+		<lineSpacing>1.68</lineSpacing>
+	</textlist>
+</view>
+	
+</theme>
